@@ -4,6 +4,11 @@ import pathlib
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+
 # URI: postgresql://username:password@domain:port/database
 
 file_config = pathlib.Path(__file__).parent.parent.joinpath('config.ini')  # ../config.ini
